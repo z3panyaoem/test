@@ -22,8 +22,8 @@ CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_tcpdump=y
 EOF
-make defconfig 2>>../output/aaaa.txt
-make V=99
+make defconfig >> ../output/aaaa.txt 2>&1
+make V=99 >> ../output/aaaa.txt 2>&1
 popd
 cp openwrt/.config output/config
 tree openwrt/bin/ >> output/aaaa.txt
