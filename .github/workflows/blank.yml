@@ -34,6 +34,6 @@ jobs:
         ./test.sh
     - name: Upload artifact
       uses: actions/upload-artifact@master
-        with:
-        name: OpenWrt firmware
+      with:
+        name: testfile
         path: ./test.sh
