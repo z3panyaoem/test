@@ -32,3 +32,8 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         ./test.sh
+    - name: Upload artifact
+      uses: actions/upload-artifact@master
+        with:
+        name: OpenWrt firmware
+        path: ./test.sh
