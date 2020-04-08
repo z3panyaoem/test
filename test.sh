@@ -14,4 +14,4 @@ pushd openwrt
 #make defconfig
 popd
 #cp openwrt/.config output/
-#tree openwrt/ >> output/aaaa.txt
+tree openwrt/ >> output/aaaa.txt
