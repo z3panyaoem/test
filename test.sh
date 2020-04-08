@@ -14,7 +14,14 @@ echo download feed >> ../output/aaaa.txt
 ./scripts/feeds install -a
 
 echo config >> ../output/aaaa.txt
+rm -rf .config .config.all
+cat >> .config <<EOF
+ONFIG_TARGET_bcm53xx=y
+CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3=y
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_tcpdump=y
+EOF
 make defconfig
 popd
-cp openwrt/.config output/
-tree openwrt/ >> output/aaaa.txt
+cp openwrt/.config output/config
+tree openwrt/bin/ >> output/aaaa.txt
