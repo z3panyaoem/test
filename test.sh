@@ -16,7 +16,7 @@ echo download feed >> ../output/aaaa.txt
 echo config >> ../output/aaaa.txt
 rm -rf .config .config.all
 cat >> .config <<EOF
-ONFIG_TARGET_bcm53xx=y
+CONFIG_TARGET_bcm53xx=y
 CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_tcpdump=y
