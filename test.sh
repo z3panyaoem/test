@@ -2,6 +2,8 @@
 mkdir -p output
 echo start >> output/aaaa.txt
 
+sudo apt-get install test
+
 echo download src >> output/aaaa.txt
 git clone -b openwrt-19.07 https://github.com/openwrt/openwrt.git
 pushd openwrt
