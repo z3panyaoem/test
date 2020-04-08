@@ -2,6 +2,7 @@
 mkdir -p output
 echo start >> output/aaaa.txt
 
+sudo apt-get update
 sudo apt-get -y install tree
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint
 
@@ -21,7 +22,7 @@ CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_tcpdump=y
 EOF
-make defconfig
+make defconfig 2>>../output/aaaa.txt
 make V=99
 popd
 cp openwrt/.config output/config
