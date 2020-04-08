@@ -22,6 +22,7 @@ CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_tcpdump=y
 EOF
 make defconfig
+make V=99
 popd
 cp openwrt/.config output/config
 tree openwrt/bin/ >> output/aaaa.txt
