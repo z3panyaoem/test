@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo aaaaaaaaaaaaaaaaaaaa
+echo aaaaaaaaaaaaaaaaaaaa >> aaaa.txt

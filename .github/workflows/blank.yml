@@ -37,3 +37,4 @@ jobs:
       with:
         name: testfile
         path: ./test.sh
+        path: ./aaaa.txt
