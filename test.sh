@@ -22,12 +22,15 @@ CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_tcpdump=y
 EOF
-make defconfig >> ../output/log_cfg.txt 2>&1
+#make defconfig >> ../output/log_cfg.txt 2>&1
+make defconfig
 
 # 开始编译
-make V=99 >> ../output/log_build.txt 2>&1
+#make V=99 >> ../output/log_build.txt 2>&1
+make V=99
 popd
 
 # 上载文件
-cp openwrt/.config output/config
-tree openwrt/bin/ >> output/log_tree.txt
+#cp openwrt/.config output/config
+#tree openwrt/bin/ >> output/log_tree.txt
+cp openwrt/bin/targets/bcm53xx/generic/openwrt-bcm53xx-phicomm-k3-squashfs.trx output/
