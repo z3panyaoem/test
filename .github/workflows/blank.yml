@@ -36,4 +36,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: testfile
-        path: ./aaaa.txt
+        path: ./output
