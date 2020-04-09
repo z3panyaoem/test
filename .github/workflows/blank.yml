@@ -12,8 +12,8 @@ jobs:
     - name: Run Shell Script
       run: ./test.sh
     
-    - name: Upload artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: testfile
-        path: ./output
+      #    - name: Upload artifact
+      #      uses: actions/upload-artifact@master
+      #      with:
+      #  name: testfile
+  #  path: ./output
