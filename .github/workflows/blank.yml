@@ -1,14 +1,16 @@
 #  .github/workflows/blank.yml
 name: Openwrt-build
 
-on: repository_dispatch
+on: 
+    repository_dispatch:
+        types: do-something
 
 jobs:
-  build:
-    runs-on: ubuntu-18.04
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    build:
+        runs-on: ubuntu-18.04
+        steps:
+        - name: Checkout
+            uses: actions/checkout@v2
 
-    - name: Run Shell Script
-      run: ./test.sh
+        - name: Run Shell Script
+            run: ./test.sh
