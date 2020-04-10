@@ -1,6 +1,7 @@
+#  .github/workflows/blank.yml
 name: Openwrt-build
 
-on: push
+on: repository_dispatch
 
 jobs:
   build:
@@ -11,9 +12,3 @@ jobs:
 
     - name: Run Shell Script
       run: ./test.sh
-    
-      #    - name: Upload artifact
-      #      uses: actions/upload-artifact@master
-      #      with:
-      #  name: testfile
-  #  path: ./output
